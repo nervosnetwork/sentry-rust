@@ -1,4 +1,5 @@
 use std::borrow::Cow;
+use std::collections::{HashMap, VecDeque};
 use std::fmt;
 use std::sync::{Arc, Mutex, PoisonError, RwLock};
 
@@ -36,12 +37,12 @@ pub struct Scope {
     pub(crate) level: Option<Level>,
     pub(crate) fingerprint: Option<Arc<Vec<Cow<'static, str>>>>,
     pub(crate) transaction: Option<Arc<String>>,
-    pub(crate) breadcrumbs: im::Vector<Breadcrumb>,
+    pub(crate) breadcrumbs: VecDeque<Breadcrumb>,
     pub(crate) user: Option<Arc<User>>,
-    pub(crate) extra: im::HashMap<String, Value>,
-    pub(crate) tags: im::HashMap<String, String>,
-    pub(crate) contexts: im::HashMap<String, Context>,
-    pub(crate) event_processors: im::Vector<Arc<EventProcessor>>,
+    pub(crate) extra: HashMap<String, Value>,
+    pub(crate) tags: HashMap<String, String>,
+    pub(crate) contexts: HashMap<String, Context>,
+    pub(crate) event_processors: VecDeque<Arc<EventProcessor>>,
     pub(crate) session: Arc<Mutex<Option<Session>>>,
 }
 
@@ -234,12 +235,10 @@ impl Scope {
             }
         }
 
-        event
-            .breadcrumbs
-            .extend(self.breadcrumbs.clone().into_iter());
-        event.extra.extend(self.extra.clone().into_iter());
-        event.tags.extend(self.tags.clone().into_iter());
-        event.contexts.extend(self.contexts.clone().into_iter());
+        event.breadcrumbs.extend(self.breadcrumbs.clone());
+        event.extra.extend(self.extra.clone());
+        event.tags.extend(self.tags.clone());
+        event.contexts.extend(self.contexts.clone());
 
         if event.transaction.is_none() {
             if let Some(ref txn) = self.transaction {
