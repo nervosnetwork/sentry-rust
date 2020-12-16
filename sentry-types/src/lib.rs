@@ -22,6 +22,8 @@
 //! and missing attributes can be filled in:
 //!
 //! ```rust
+//! use ckb_sentry_types as sentry_types;
+//!
 //! use sentry_types::protocol::v7;
 //!
 //! let event = v7::Event {

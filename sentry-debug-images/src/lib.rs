@@ -12,6 +12,8 @@
 //! a custom filter can be defined as well.
 //!
 //! ```
+//! use ckb_sentry_debug_images as sentry_debug_images;
+//!
 //! use sentry_core::Level;
 //! let integration = sentry_debug_images::DebugImagesIntegration::new()
 //!     .filter(|event| event.level >= Level::Warning);

@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 fn main() {
     let _sentry = sentry::init(sentry::ClientOptions {
         release: sentry::release_name!(),

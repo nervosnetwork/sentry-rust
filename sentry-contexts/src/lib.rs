@@ -9,6 +9,8 @@
 //! # Examples
 //!
 //! ```
+//! use ckb_sentry_contexts as sentry_contexts;
+//!
 //! let integration = sentry_contexts::ContextIntegration::new().add_os(false);
 //! let _sentry = sentry::init(sentry::ClientOptions::new().add_integration(integration));
 //! ```

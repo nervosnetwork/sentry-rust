@@ -1,5 +1,7 @@
 #![cfg(feature = "test")]
 
+use ckb_sentry as sentry;
+
 use std::panic;
 use std::sync::Arc;
 

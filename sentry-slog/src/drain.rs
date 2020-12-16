@@ -80,6 +80,8 @@ impl<D: Drain> SentryDrain<D> {
     /// # Examples
     ///
     /// ```
+    /// use ckb_sentry_slog as sentry_slog;
+    ///
     /// use sentry_slog::{breadcrumb_from_record, RecordMapping, SentryDrain};
     ///
     /// let drain = SentryDrain::new(slog::Discard).mapper(|record, kv| match record.level() {

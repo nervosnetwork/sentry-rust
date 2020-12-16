@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 // See https://github.com/getsentry/sentry-rust/issues/184
 #[tokio::test]
 async fn test_nested_async_runtimes() {

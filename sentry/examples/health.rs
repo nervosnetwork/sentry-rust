@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 fn main() {
     let _sentry = sentry::init(sentry::ClientOptions {
         // release health requires a release to be set

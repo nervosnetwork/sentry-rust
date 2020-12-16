@@ -52,6 +52,8 @@ pub fn event_from_record(record: &Record, values: &OwnedKVList) -> Event<'static
 /// # Examples
 ///
 /// ```
+/// use ckb_sentry_slog as sentry_slog;
+///
 /// let args = format_args!("");
 /// let record = slog::record!(slog::Level::Error, "", &args, slog::b!());
 /// let kv = slog::o!().into();

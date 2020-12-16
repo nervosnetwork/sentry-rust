@@ -52,6 +52,8 @@ impl Drop for ClientInitGuard {
 /// # Examples
 ///
 /// ```
+/// use ckb_sentry as sentry;
+///
 /// let _sentry = sentry::init("https://key@sentry.io/1234");
 /// ```
 ///
@@ -60,6 +62,8 @@ impl Drop for ClientInitGuard {
 /// might be lost.
 ///
 /// ```
+/// use ckb_sentry as sentry;
+///
 /// std::mem::forget(sentry::init("https://key@sentry.io/1234"));
 /// ```
 ///
@@ -67,6 +71,8 @@ impl Drop for ClientInitGuard {
 /// created to enable further configuration:
 ///
 /// ```
+/// use ckb_sentry as sentry;
+///
 /// let sentry = sentry::init(sentry::ClientOptions {
 ///     release: Some("foo-bar-baz@1.0.0".into()),
 ///     ..Default::default()

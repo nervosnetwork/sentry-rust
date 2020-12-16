@@ -8,6 +8,8 @@
 //! # Examples
 //!
 //! ```
+//! use ckb_sentry_log as sentry_log;
+//!
 //! let mut log_builder = pretty_env_logger::formatted_builder();
 //! log_builder.parse_filters("info");
 //! let logger = sentry_log::SentryLogger::with_dest(log_builder.build());
@@ -25,6 +27,8 @@
 //! records:
 //!
 //! ```
+//! use ckb_sentry_log as sentry_log;
+//!
 //! use sentry_log::LogFilter;
 //!
 //! let logger = sentry_log::SentryLogger::new().filter(|md| match md.level() {

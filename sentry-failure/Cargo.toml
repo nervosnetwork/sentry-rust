@@ -1,11 +1,10 @@
 [package]
-name = "sentry-failure"
+name = "ckb-sentry-failure"
 version = "0.21.0"
-authors = ["Sentry <hello@sentry.io>"]
+authors = ["Sentry <hello@sentry.io>", "Nervos Core Dev <dev@nervos.org>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/getsentry/sentry-rust"
-homepage = "https://sentry.io/welcome/"
+repository = "https://github.com/nervosnetwork/sentry-rust"
 description = """
 Sentry integration for failure crate.
 """
@@ -15,10 +14,10 @@ edition = "2018"
 all-features = true
 
 [dependencies]
-sentry-core = { version = "0.21.0", path = "../sentry-core" }
-sentry-backtrace = { version = "0.21.0", path = "../sentry-backtrace" }
+sentry-core = { package = "ckb-sentry-core", version = "0.21.0", path = "../sentry-core" }
+sentry-backtrace = { package = "ckb-sentry-backtrace", version = "0.21.0", path = "../sentry-backtrace" }
 failure = "0.1.6"
 
 [dev-dependencies]
-sentry = { version = "0.21.0", path = "../sentry", default-features = false, features = ["test"] }
-sentry-panic = { version = "0.21.0", path = "../sentry-panic" }
+sentry = { package = "ckb-sentry", version = "0.21.0", path = "../sentry", default-features = false, features = ["test"] }
+sentry-panic = { package = "ckb-sentry-panic", version = "0.21.0", path = "../sentry-panic" }

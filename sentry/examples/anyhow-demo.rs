@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 use anyhow_ as anyhow;
 
 fn execute() -> anyhow::Result<usize> {

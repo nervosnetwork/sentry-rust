@@ -11,6 +11,8 @@
 //! might optionally create a sentry `Event` out of a `PanicInfo`.
 //!
 //! ```
+//! use ckb_sentry_panic as sentry_panic;
+//!
 //! let integration = sentry_panic::PanicIntegration::default().add_extractor(|info| None);
 //! ```
 

@@ -1,11 +1,10 @@
 [package]
-name = "sentry-types"
+name = "ckb-sentry-types"
 version = "0.21.0"
-authors = ["Sentry <hello@sentry.io>"]
+authors = ["Sentry <hello@sentry.io>", "Nervos Core Dev <dev@nervos.org>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/getsentry/sentry-rust"
-homepage = "https://sentry.io/welcome/"
+repository = "https://github.com/nervosnetwork/sentry-rust"
 description = """
 Common reusable types for implementing the sentry.io protocol.
 """

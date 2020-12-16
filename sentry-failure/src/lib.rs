@@ -8,6 +8,8 @@
 //! # Example
 //!
 //! ```no_run
+//! use ckb_sentry_failure as sentry_failure;
+//!
 //! # use sentry_core as sentry;
 //! # fn function_that_might_fail() -> Result<(), failure::Error> { Ok(()) }
 //! use sentry_failure::capture_error;
@@ -77,6 +79,8 @@ impl Integration for FailureIntegration {
 /// # Examples
 ///
 /// ```
+/// use ckb_sentry_failure as sentry_failure;
+///
 /// let panic_integration =
 ///     sentry_panic::PanicIntegration::new().add_extractor(sentry_failure::panic_extractor);
 /// ```

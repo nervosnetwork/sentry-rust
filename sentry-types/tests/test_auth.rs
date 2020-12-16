@@ -1,3 +1,5 @@
+use ckb_sentry_types as sentry_types;
+
 use std::collections::HashMap;
 
 use chrono::{TimeZone, Utc};

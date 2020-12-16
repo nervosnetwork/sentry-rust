@@ -7,6 +7,9 @@
 //!
 //! ```no_run
 //! # #[macro_use] extern crate error_chain;
+//!
+//! use ckb_sentry_error_chain as sentry_error_chain;
+//!
 //! # error_chain! {}
 //! use sentry_error_chain::{capture_error_chain, ErrorChainIntegration};
 //! # fn function_that_might_fail() -> Result<()> { Ok(()) }

@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 use log::{debug, error, info, warn};
 use log_ as log;
 

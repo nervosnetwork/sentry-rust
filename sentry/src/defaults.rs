@@ -33,6 +33,8 @@ use crate::{ClientOptions, Integration};
 ///
 /// # Examples
 /// ```
+/// use ckb_sentry as sentry;
+///
 /// std::env::set_var("SENTRY_RELEASE", "release-from-env");
 ///
 /// let options = sentry::ClientOptions::default();

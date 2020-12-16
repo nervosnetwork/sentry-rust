@@ -1,5 +1,7 @@
 #![allow(deprecated)]
 
+use ckb_sentry as sentry;
+
 #[macro_use]
 extern crate error_chain_;
 

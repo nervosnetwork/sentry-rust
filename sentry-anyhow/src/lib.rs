@@ -3,6 +3,8 @@
 //! # Example
 //!
 //! ```no_run
+//! use ckb_sentry_anyhow as sentry_anyhow;
+//!
 //! use sentry_anyhow::capture_anyhow;
 //!
 //! fn function_that_might_fail() -> anyhow::Result<()> {

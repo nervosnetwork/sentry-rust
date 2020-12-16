@@ -1,3 +1,5 @@
+use ckb_sentry_types as sentry_types;
+
 use chrono::{DateTime, TimeZone, Utc};
 use std::borrow::Cow;
 use uuid::Uuid;

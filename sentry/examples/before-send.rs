@@ -1,3 +1,5 @@
+use ckb_sentry as sentry;
+
 use std::sync::Arc;
 
 fn main() {

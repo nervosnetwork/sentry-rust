@@ -10,6 +10,8 @@
 //! # Examples
 //!
 //! ```
+//! use ckb_sentry_slog as sentry_slog;
+//!
 //! use sentry::{init, ClientOptions};
 //! use sentry_slog::SentryDrain;
 //!
@@ -44,6 +46,8 @@
 //! The Drain can also be customized with a `filter`, and a `mapper`:
 //!
 //! ```
+//! use ckb_sentry_slog as sentry_slog;
+//!
 //! use sentry_slog::{exception_from_record, LevelFilter, RecordMapping, SentryDrain};
 //!
 //! let drain = SentryDrain::new(slog::Discard)

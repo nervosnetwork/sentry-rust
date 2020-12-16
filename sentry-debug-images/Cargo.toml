@@ -1,11 +1,10 @@
 [package]
-name = "sentry-debug-images"
+name = "ckb-sentry-debug-images"
 version = "0.21.0"
-authors = ["Sentry <hello@sentry.io>"]
+authors = ["Sentry <hello@sentry.io>", "Nervos Core Dev <dev@nervos.org>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/getsentry/sentry-rust"
-homepage = "https://sentry.io/welcome/"
+repository = "https://github.com/nervosnetwork/sentry-rust"
 description = """
 Sentry integration that adds the list of loaded libraries to events.
 """
@@ -15,6 +14,6 @@ edition = "2018"
 all-features = true
 
 [dependencies]
-sentry-core = { version = "0.21.0", path = "../sentry-core" }
+sentry-core = { package = "ckb-sentry-core", version = "0.21.0", path = "../sentry-core" }
 lazy_static = "1.4.0"
 findshlibs = "0.7.0"
